@@ -292,5 +292,40 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
     line-height: 1.55 !important;
   }
 }
+/* ===========================
+   FIX HEADER ALIGNMENT ON ALL PAGES
+   =========================== */
+
+.header-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* keeps nav on right */
+  gap: 20px;
+}
+
+/* Make both classes behave the same */
+.brand-small-row,
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* MOBILE — keep clean stacking */
+@media (max-width: 720px) {
+  .header-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
 
 
