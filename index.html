@@ -252,49 +252,6 @@ leadForm.addEventListener('submit', async (e) => {
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script>
-// -----------------------------
-// Mobile Hamburger Menu
-// -----------------------------
-const menuBtn = document.querySelector('.mobile-menu-button');
-const nav = document.querySelector('.main-nav');
-
-if (menuBtn) {
-  menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('active');
-    nav.classList.toggle('open');
-  });
-}
-
-// -----------------------------
-// Fade-in Scroll Animations
-// -----------------------------
-const revealElements = document.querySelectorAll(
-  '.fade-in, .card, .service, .contact-card, .portfolio-grid img'
-);
-
-function revealOnScroll() {
-  const trigger = window.innerHeight * 0.85;
-
-  revealElements.forEach(el => {
-    const position = el.getBoundingClientRect().top;
-    if (position < trigger) {
-      el.classList.add('show');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-
-// -----------------------------
-// Lazy Loading for Images
-// -----------------------------
-document.querySelectorAll('img').forEach(img => {
-  img.loading = "lazy";
-});
-</script>
-
-  <script>
   (function(e,a,d,i,c,t=a.createElement(d)){e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},t.src=i,t.async=1,a.body.insertAdjacentElement("beforeend",t)})(window,document,"script","https://widget.quickchat.ai/chat.js","_quickchat");
   _quickchat("host", "app.quickchat.ai");
   _quickchat("init", "aaz5sl5sy2");
