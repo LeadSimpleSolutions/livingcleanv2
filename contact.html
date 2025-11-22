@@ -89,23 +89,30 @@
   _quickchat("host", "app.quickchat.ai");
   _quickchat("init", "aaz5sl5sy2");
 </script>
-  <script>
-    function submitContactForm(e){
-      e.preventDefault();
-      var name = document.getElementById('c-name').value.trim();
-      var email = document.getElementById('c-email').value.trim();
-      var phone = document.getElementById('c-phone').value.trim();
-      var message = document.getElementById('c-message').value.trim();
-      if(!name || !email || !phone){
-        document.getElementById('contactStatus').textContent = 'Please fill in required fields.';
-        return false;
-      }
-      var subject = encodeURIComponent('Contact Form — ' + name);
-      var body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\nPhone: ' + phone + '\\n\\nMessage:\\n' + message);
-      window.location.href = 'mailto:kilbournbioworks@gmail.com?subject=' + subject + '&body=' + body;
-      document.getElementById('contactStatus').textContent = 'Opening mail client...';
-      return false;
-    }
-  </script>
-</body>
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  
+  <!-- Your Web3Forms access key -->
+  <input type="hidden" name="access_key" value="dcb2e950-571d-420d-9cc7-fb462047a864">
+
+  <!-- Name -->
+  <label for="c-name">Name</label>
+  <input id="c-name" type="text" name="name" required>
+
+  <!-- Email -->
+  <label for="c-email">Email</label>
+  <input id="c-email" type="email" name="email" required>
+
+  <!-- Phone -->
+  <label for="c-phone">Phone</label>
+  <input id="c-phone" type="tel" name="phone" required>
+
+  <!-- Message -->
+  <label for="c-message">Message</label>
+  <textarea id="c-message" name="message" rows="4" required></textarea>
+
+  <!-- Submit Button -->
+  <button type="submit" class="btn btn-primary">Send Message</button>
+
+</form>
+
 </html>
