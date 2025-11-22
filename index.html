@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Living Clean Landscapes — Professional Landscaping & Property Services</title>
+  <meta name="description" content="Living Clean Landscapes — premium residential and commercial landscaping, tree service, hauling & cleaning. Get a free estimate today." />
+  <link rel="icon" href="/mnt/data/header.jpg">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="wrap header-grid">
+      <div class="brand">
+        <img src="/mnt/data/header.jpg" alt="Living Clean Landscapes logo" class="brand-logo">
+        <div class="brand-text">
+          <strong class="brand-name">Living Clean Landscapes</strong>
+          <span class="brand-tag">Clean yards. Trusted service.</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <h1>Transforming Neighborhoods — One Clean, Beautiful Yard at a Time</h1>
+          <p class="lead">Residential and commercial landscaping, tree work, hauling & professional cleaning — dependable service, clear pricing, and eco-conscious practices.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Get a Free Estimate</a>
+            <a class="btn btn-outline" href="#services">Explore Services</a>
+          </div>
+
+          <ul class="trust-list" aria-hidden="false">
+            <li>✔ Licensed & insured</li>
+            <li>✔ Local, friendly crews</li>
+            <li>✔ Eco-friendly products available</li>
+          </ul>
+        </div>
+
+        <aside class="lead-form">
+          <div class="card">
+            <h3>Request a Quote</h3>
+            <p class="muted">Fast response • Honest pricing • Free on-site estimates</p>
+            <form id="leadForm" onsubmit="return submitFormEmail(event)">
+              <label for="q-name">Name</label>
+              <input id="q-name" name="name" type="text" required placeholder="Your full name">
+
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" required placeholder="Phone number">
+
+              <label for="q-email">Email</label>
+              <input id="q-email" name="email" type="email" placeholder="Email (optional)">
+
+              <label for="q-service">Service</label>
+              <select id="q-service" name="service" required>
+                <option value="Gardening">Gardening / Maintenance</option>
+                <option value="Tree Service">Tree Service</option>
+                <option value="Landscaping">Landscape Contractor</option>
+                <option value="Sprinkler">Sprinkler Install & Repair</option>
+                <option value="Cleaning">House Cleaning</option>
+                <option value="Hauling">Hauling & Junk Removal</option>
+              </select>
+
+              <label for="q-message">Message</label>
+              <textarea id="q-message" name="message" rows="3" placeholder="Tell us about your project (optional)"></textarea>
+
+              <button class="btn btn-primary" type="submit">Send Request</button>
+              <p id="leadStatus" class="form-status" aria-live="polite"></p>
+            </form>
+            <p class="footnote">Or call us: <a href="tel:5555555555" class="link-phone">(555) 555-5555</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-light">
+      <div class="wrap">
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">Comprehensive property services — from routine maintenance to full renovations.</p>
+
+        <div class="services-grid">
+          <article class="service">
+            <h3>Gardening & Maintenance</h3>
+            <p>Regular lawn care, pruning, planting, seasonal cleanups and ongoing landscape upkeep tailored to your property.</p>
+          </article>
+
+          <article class="service">
+            <h3>Tree Service</h3>
+            <p>Professional trimming, pruning, hazard removal, and stump work performed safely and efficiently.</p>
+          </article>
+
+          <article class="service">
+            <h3>Landscape Contracting</h3>
+            <p>Design, hardscape/softscape installation, renovation and full property transformations.</p>
+          </article>
+
+          <article class="service">
+            <h3>Sprinkler Install & Repair</h3>
+            <p>Smart irrigation installs, winterization, and repairs to keep your lawn healthy and water-efficient.</p>
+          </article>
+
+          <article class="service">
+            <h3>House Cleaning</h3>
+            <p>Interior cleaning services for move-ins, regular maintenance, and deep cleans that protect your home.</p>
+          </article>
+
+          <article class="service">
+            <h3>Hauling & Waste Removal</h3>
+            <p>Junk removal, yard waste hauling, and cleanouts so your property looks its best after any job.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section-dark">
+      <div class="wrap">
+        <h2 class="section-title light">Portfolio</h2>
+        <p class="section-sub light">Recent projects — before & afters that show our attention to detail.</p>
+
+        <div class="portfolio-grid" role="list">
+          <img src="/mnt/data/photo1.jpg" alt="Well maintained garden with stone border" role="listitem">
+          <img src="/mnt/data/photo2.jpg" alt="Hauling and junk removal example" role="listitem">
+          <img src="/mnt/data/photo3.jpg" alt="Tree trimming and pruning" role="listitem">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-light">
+      <div class="wrap">
+        <h2 class="section-title">What Clients Say</h2>
+        <div class="testimonials">
+          <blockquote>
+            <p>"Fast, friendly, and the yard looks incredible. Highly recommend Living Clean!"</p>
+            <cite>— Sarah T., Homeowner</cite>
+          </blockquote>
+          <blockquote>
+            <p>"Professional crew and transparent pricing. Our commercial property maintenance has never been better."</p>
+            <cite>— Reed M., Property Manager</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="cta-banner">
+      <div class="wrap cta-grid">
+        <div>
+          <h3>Ready to improve your curb appeal?</h3>
+          <p>Book a free estimate or request emergency cleanup — we respond quickly.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="contact.html">Request Estimate</a>
+          <a class="btn btn-outline" href="tel:5555555555">Call Now</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="/mnt/data/header.jpg" alt="Living Clean Landscapes logo" class="brand-small">
+        <p class="muted">Licensed & Insured • Serving the local community</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><a href="tel:5555555555" class="link-phone">(555) 555-5555</a></p>
+        <p><a href="mailto:youremail@example.com" class="link">youremail@example.com</a></p>
+        <p class="muted">© <span id="year"></span> Living Clean Landscapes LLC</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form: open mailto with prefilled body (simple fallback)
+    function submitFormEmail(e){
+      e.preventDefault();
+      var name = document.getElementById('q-name').value.trim();
+      var phone = document.getElementById('q-phone').value.trim();
+      var service = document.getElementById('q-service').value;
+      var message = document.getElementById('q-message').value.trim();
+      if(!name || !phone){
+        document.getElementById('leadStatus').textContent = 'Please enter your name and phone.';
+        return false;
+      }
+      var subject = encodeURIComponent('Estimate Request — ' + service + ' — ' + name);
+      var body = encodeURIComponent('Name: ' + name + '\\nPhone: ' + phone + '\\nService: ' + service + '\\n\\nMessage:\\n' + message);
+      // Mailto fallback — replace youremail@example.com with real email
+      window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+      document.getElementById('leadStatus').textContent = 'Opening mail client...';
+      return false;
+    }
+
+    // Insert current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

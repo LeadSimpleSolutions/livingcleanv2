@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Living Clean Landscapes</title>
+  <meta name="description" content="Contact Living Clean Landscapes for estimates, appointments, and customer support.">
+  <link rel="icon" href="/mnt/data/header.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div class="brand-small-row">
+        <img src="/mnt/data/header.jpg" alt="logo" class="brand-logo">
+        <div class="brand-text"><strong class="brand-name">Living Clean Landscapes</strong></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-light wrap contact-grid">
+      <div>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear about your project. Call, email, or send a quick message using the form — we'll get back promptly.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <h4>Phone</h4>
+            <p><a href="tel:5555555555" class="link-phone">(555) 555-5555</a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Email</h4>
+            <p><a href="mailto:youremail@example.com" class="link">youremail@example.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Service Area</h4>
+            <p>Your City & Nearby Areas</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Send a Message</h3>
+          <form id="contactForm" onsubmit="return submitContactForm(event)">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" required>
+
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" required>
+
+            <label for="c-phone">Phone</label>
+            <input id="c-phone" name="phone" type="tel" required>
+
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p id="contactStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><img src="/mnt/data/header.jpg" alt="" class="brand-small"></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="footer-contact">
+        <p><a href="tel:5555555555" class="link-phone">(555) 555-5555</a></p>
+        <p><a href="mailto:youremail@example.com" class="link">youremail@example.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitContactForm(e){
+      e.preventDefault();
+      var name = document.getElementById('c-name').value.trim();
+      var email = document.getElementById('c-email').value.trim();
+      var phone = document.getElementById('c-phone').value.trim();
+      var message = document.getElementById('c-message').value.trim();
+      if(!name || !email || !phone){
+        document.getElementById('contactStatus').textContent = 'Please fill in required fields.';
+        return false;
+      }
+      var subject = encodeURIComponent('Contact Form — ' + name);
+      var body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\nPhone: ' + phone + '\\n\\nMessage:\\n' + message);
+      window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+      document.getElementById('contactStatus').textContent = 'Opening mail client...';
+      return false;
+    }
+  </script>
+</body>
+</html>
