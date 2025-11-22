@@ -235,57 +235,62 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
     margin-right: 0 !important;
   }
 }
-/* =======================================
-   ABOUT PAGE — FULL MOBILE FIX (WORKING)
-   ======================================= */
-@media (max-width: 900px) {
+/* =====================================
+   TRUE FIX — ABOUT PAGE MOBILE LAYOUT
+   ===================================== */
+@media (max-width: 820px) {
 
-  /* Force clean stacking layout */
+  /* Make wrap flexible so grid can collapse */
+  .about-grid.wrap,
+  .wrap.about-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  /* Force About page into 1 column */
   .about-grid {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
   }
 
-  /* Main text block */
-  .about-card {
+  .about-card,
+  .about-grid > aside {
     width: 100% !important;
+    max-width: 100% !important;
   }
 
-  /* The entire sidebar block */
-  .about-grid aside {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  /* Main image */
-  .about-grid aside .rounded-img {
+  /* Image */
+  .rounded-img {
     width: 100% !important;
     height: auto !important;
-    border-radius: 12px;
+    border-radius: 14px !important;
+    display: block !important;
   }
 
-  /* The certification card */
-  .about-grid aside .small-card {
+  /* Sidebar card */
+  .small-card {
     width: 100% !important;
-    border-radius: 12px;
-    padding: 16px !important;
+    margin-top: 12px !important;
+    border-radius: 12px !important;
   }
 
-  /* Text sizing optimization */
+  /* Typography adjustments */
   .about-card h1 {
     font-size: 1.7rem !important;
-    line-height: 1.25;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem !important;
+    margin-top: 20px !important;
   }
 
   .about-card p,
-  .about-card li {
+  .about-card ul li {
     font-size: 1rem !important;
     line-height: 1.55 !important;
   }
 }
+
 
