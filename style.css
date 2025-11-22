@@ -1,0 +1,152 @@
+:root{
+  --brand: #8FAB36;
+  --accent: #FFC857;
+  --dark: #112A11;
+  --muted: #6B6B6B;
+  --bg: #FAFBFA;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --wrap: 1100px;
+  --shadow: 0 8px 30px rgba(15,20,15,0.06);
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#0f1720;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.55;
+}
+
+.wrap{width:92%;max-width:var(--wrap);margin:0 auto}
+
+/* ========================
+   Header
+   ======================== */
+.site-header{
+  background: #fff;
+  border-bottom: 1px solid rgba(16,24,16,0.04);
+  position: sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(4px);
+}
+
+.header-grid{display:flex;align-items:center;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{width:96px;height:auto;border-radius:10px;object-fit:cover;box-shadow:var(--shadow)}
+.brand-text .brand-name{display:block;font-weight:800;color:var(--dark);font-size:1.05rem}
+.brand-text .brand-tag{display:block;color:var(--muted);font-size:0.85rem;margin-top:2px}
+
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:18px}
+.nav-link{font-weight:600;text-decoration:none;color:var(--dark);padding:8px 12px;border-radius:8px;transition:all .18s ease}
+.nav-link:hover{background:rgba(143,171,54,0.08);color:var(--brand)}
+.nav-link.cta{background:var(--brand);color:#fff;padding:9px 14px}
+.nav-link.cta:hover{opacity:.95}
+.nav-link.active{outline:2px solid rgba(143,171,54,0.12);}
+
+/* ========================
+   HERO
+   ======================== */
+.hero{padding:44px 0;background:linear-gradient(180deg, rgba(140,190,60,0.05), rgba(140,190,60,0.02))}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+.hero-content h1{font-size:2.05rem;margin:6px 0 12px;color:var(--dark);line-height:1.18}
+.lead{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+.hero-actions{display:flex;gap:12px;margin-bottom:16px}
+.btn{display:inline-block;text-decoration:none;border:none;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 20px rgba(139,171,54,0.18)}
+.btn-outline{background:transparent;border:1.5px solid rgba(16,20,16,0.06);color:var(--dark)}
+.trust-list{list-style:none;padding:0;margin:12px 0 0;display:flex;gap:16px;color:var(--muted);font-size:0.95rem}
+
+/* Lead form card */
+.lead-form .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.lead-form h3{margin:0 0 6px}
+.muted{color:var(--muted);font-size:0.95rem}
+label{display:block;font-size:0.85rem;margin-top:10px;color:var(--muted)}
+input[type="text"],input[type="email"],input[type="tel"],select,textarea{
+  width:100%;padding:10px;border:1px solid rgba(12,18,12,0.06);border-radius:8px;margin-top:6px;font-size:0.95rem;
+}
+.form-status{margin-top:10px;color:var(--muted);font-size:0.9rem}
+
+/* ========================
+   Sections
+   ======================== */
+.section-light{padding:48px 0}
+.section-dark{padding:48px 0;background:#17321a;color:#fff}
+.section-title{font-size:1.45rem;margin:0 0 8px;font-weight:800}
+.section-title.light{color:#fff}
+.section-sub{color:var(--muted);margin-bottom:20px}
+
+/* Services grid */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.service{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(10,10,10,0.03)}
+.service h3{margin-top:0;color:var(--dark)}
+
+/* Portfolio */
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.portfolio-grid img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block;box-shadow:var(--shadow)}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+blockquote{background:var(--card-bg);padding:16px;border-radius:10px;border-left:4px solid var(--brand)}
+blockquote p{margin:0;font-style:normal}
+blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem}
+
+/* CTA banner */
+.cta-banner{background:linear-gradient(90deg, rgba(139,171,54,0.12), rgba(255,200,87,0.04));padding:28px 0;margin-top:20px;border-top:1px solid rgba(15,20,15,0.03)}
+.cta-grid{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.cta-actions .btn{margin-left:10px}
+
+/* Services detail list (services page) */
+.service-list{display:grid;gap:22px;margin-top:22px}
+.service-row{display:flex;gap:18px;align-items:center;background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:var(--shadow)}
+.service-row.reverse{flex-direction:row-reverse}
+.service-thumb{width:220px;height:140px;object-fit:cover;border-radius:10px}
+
+/* About page */
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start}
+.rounded-img{width:100%;height:auto;border-radius:10px;object-fit:cover}
+.small-card{background:var(--card-bg);padding:14px;border-radius:10px;margin-top:12px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:start}
+.contact-cards{display:flex;gap:12px;flex-wrap:wrap}
+.contact-card{background:var(--card-bg);padding:12px;border-radius:10px;min-width:160px;box-shadow:var(--shadow)}
+
+/* Footer */
+.site-footer{background:#0b1a0b;color:#dfeee0;padding:28px 0;margin-top:36px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start}
+.brand-small{width:84px;border-radius:8px}
+
+/* ========================
+   Responsive
+   ======================== */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr 320px}
+  .about-grid, .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .testimonials{grid-template-columns:1fr}
+  .portfolio-grid img{height:180px}
+}
+
+@media(max-width:720px){
+  .main-nav{gap:10px}
+  .brand-logo{width:72px}
+  .hero-content h1{font-size:1.5rem}
+  .lead-form{order:2}
+  .hero-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .portfolio-grid img{height:140px}
+  .service-thumb{width:140px;height:100px}
+  .wrap{width:94%}
+}
+
+/* small helpers */
+.link{color:inherit;text-decoration:none}
+.link-phone{font-weight:700;color:inherit}
+.muted{color:var(--muted)}
